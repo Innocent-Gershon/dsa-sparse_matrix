@@ -6,7 +6,7 @@ class MatrixOperations {
             throw new Error("Matrix dimensions must match for addition");
         }
 
-        let result = new SparseMatrix(); // Corrected constructor
+        let result = new SparseMatrix(); 
         result.numRows = matA.numRows;
         result.numCols = matA.numCols;
 

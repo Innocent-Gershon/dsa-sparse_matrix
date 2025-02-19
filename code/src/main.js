@@ -16,9 +16,9 @@ console.log("3️⃣. Multiplication ✖️");
 
 rl.question("Choose an operation (1️⃣ ➡️ 3️⃣): ", function(choice) {
     try {
-        choice = choice.trim(); // Ensure input is properly formatted
+        choice = choice.trim(); 
 
-        // Define file paths
+        
         const matrix1Path = path.join(__dirname, "../sample_inputs/matrix1.txt");
         const matrix2Path = path.join(__dirname, "../sample_inputs/matrix2.txt");
 
@@ -26,7 +26,7 @@ rl.question("Choose an operation (1️⃣ ➡️ 3️⃣): ", function(choice) {
         console.log(`📄 Matrix 1 Path: ${matrix1Path}`);
         console.log(`📄 Matrix 2 Path: ${matrix2Path}`);
 
-        // Validate file existence
+        
         if (!fs.existsSync(matrix1Path)) {
             throw new Error(`File not found: ${matrix1Path}`);
         }

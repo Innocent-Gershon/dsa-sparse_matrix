@@ -54,7 +54,7 @@ class SparseMatrix {
             console.log("Matrix loaded successfully.");
         } catch (error) {
             console.error(`Error loading matrix: ${error.message}`);
-            throw error;  // 🔹 Don't use process.exit(1), let main.js handle it
+            throw error;  
         }
     }
 
