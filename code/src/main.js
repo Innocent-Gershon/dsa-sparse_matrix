@@ -1,21 +1,26 @@
-const SparseMatrix = require("./sparseMatrix");
+const SparseMatrix = require("./SparseMatrix");
 const MatrixOperations = require("./operations");
 const readline = require("readline");
+const path = require("path");
 
 const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
 
-console.log("Sparse Matrix Operations");
-console.log("1. Addition");
-console.log("2. Subtraction");
-console.log("3. Multiplication");
+console.log("Sparse Matrix Operations:");
+console.log("1️⃣. Addition ➕");
+console.log("2️⃣. Subtraction ➖ ");
+console.log("3️⃣. Multiplication ✖️");
 
-rl.question("Select operation (1/2/3): ", (choice) => {
+rl.question("Choose an operation ( 1️⃣ ➡️ 3️⃣  ): ", function(choice) {
     try {
-        let matA = new SparseMatrix("../sample_inputs/matrix1.txt");
-        let matB = new SparseMatrix("../sample_inputs/matrix2.txt");
+        // Ensure correct file paths
+        const matrix1Path = path.join(__dirname, "../sample_inputs/matrix1.txt");
+        const matrix2Path = path.join(__dirname, "../sample_inputs/matrix2.txt");
+
+        let matA = new SparseMatrix(matrix1Path);
+        let matB = new SparseMatrix(matrix2Path);
         let result;
 
         switch (choice) {
